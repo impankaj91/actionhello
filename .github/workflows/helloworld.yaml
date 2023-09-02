@@ -11,9 +11,11 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
+      - name: Set environment variable
+        run: echo "MY_VARIABLE=${{ SLACKURL }}" >> $GITHUB_ENV
       - name: "Clone Code"
         uses: actions/checkout@v2
-      - name: "Run hello"
-        run: python .github/scripts/hello.py
+      - name: "Run Slack Notification!"
+        run: python .github/scripts/merge_slack.py
 
   
