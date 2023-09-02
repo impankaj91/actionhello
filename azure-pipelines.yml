@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: onprem_ubuntu
 
 steps:
 - task: NodeTool@0
