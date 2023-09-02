@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: "Clone Code"
-        run: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: "Run hello"
         run: python .github/scripts/hello.py
 
