@@ -2,17 +2,18 @@
 name: "Hello World"
 
 on:
-  push:
+  pull_request:
     branches:
-      - "feature"
-
-
+      - main
+    
 jobs:
   basic-ubuntu-20:
     runs-on: ubuntu-20.04
 
     steps:
-      - name: "Print Hello World"
-        run: echo "Hello Pankaj!!"
+      - name: "Clone Code"
+        run: actions/checkout@v2
+      - name: "Run hello"
+        run: python .github/scripts/hello.py
 
   
