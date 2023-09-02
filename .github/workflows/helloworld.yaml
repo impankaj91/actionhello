@@ -1,0 +1,18 @@
+#Sample GitHub Action File.
+name: "Hello World"
+
+on:
+  push:
+    branches:
+      - "feature"
+
+
+jobs:
+  basic-ubuntu-20:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: "Print Hello World"
+        run: echo "Hello Pankaj!!"
+
+  
